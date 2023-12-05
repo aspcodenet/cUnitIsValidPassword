@@ -3,6 +3,11 @@
 #include "password.h"
 
 
+//MÅNGA ENHETSTESTER
+// handlar det om att ANROPA EN FUNTKION MED SPECIFIKA VÄRDEN
+// och VERIFIERA ATT DET BLIR RÄTT SVAR
+// .-> exefil som kan köras - kör den så körs alla tester
+
 
 int main(){
     char buffer[255];

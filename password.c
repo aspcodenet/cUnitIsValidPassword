@@ -3,8 +3,6 @@
 #include <ctype.h>
 
 PASSWORD_ERROR checkPassword(const char *password){
-    if(strlen(password) < 8) return PASSWORD_ERROR_TOO_SHORT;
-
     int uppercaseCount = 0;
     int lowercaseCount = 0;
     int digitCount = 0;
@@ -25,6 +23,10 @@ PASSWORD_ERROR checkPassword(const char *password){
     if(strstr(password,"secret")) return PASSWORD_ERROR_CANT_CONTAIN_CERTAIN_WORDS;
     if(strstr(password,"summer")) return PASSWORD_ERROR_CANT_CONTAIN_CERTAIN_WORDS;
     if(strstr(password,"winter")) return PASSWORD_ERROR_CANT_CONTAIN_CERTAIN_WORDS;
+
+    if(strlen(password) < 8) {
+        return PASSWORD_ERROR_TOO_SHORT;
+    }
 
 
     return  PASSWORD_ERROR_OK;
